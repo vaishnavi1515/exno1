@@ -316,12 +316,17 @@ df1
 
 <img width="544" height="682" alt="image" src="https://github.com/user-attachments/assets/d5db12ca-81dd-4b8b-8363-ae423ef3d4d9" />
 
+
+
 ~~~~
 val=df['height']
 val
 ~~~
 
+
 <img width="703" height="731" alt="Screenshot 2025-08-27 203757" src="https://github.com/user-attachments/assets/0d2687a3-44f0-494a-9d9a-96a04aabdbd2" />
+
+
 
 ~~~
 out=[]
@@ -336,14 +341,18 @@ def d_o(val):
   return out
 ~~~
 
-  <img width="962" height="345" alt="Screenshot 2025-08-27 203842" src="https://github.com/user-attachments/assets/e4e1be24-ed0f-4bd3-a23a-17d6946ad55b" />
+
+
+<img width="962" height="345" alt="Screenshot 2025-08-27 203842" src="https://github.com/user-attachments/assets/e4e1be24-ed0f-4bd3-a23a-17d6946ad55b" />
 
 
  op
 
- <img width="966" height="114" alt="Screenshot 2025-08-27 204101" src="https://github.com/user-attachments/assets/d72ecd59-ed38-4f18-a686-5e902320388f" />
+<img width="966" height="114" alt="Screenshot 2025-08-27 204101" src="https://github.com/user-attachments/assets/255a7274-417b-43d9-84ae-afbbddb35b6e" />
 
 
 
-# Result
-          <<include your Result here>>
+
+# Result#:
+
+Thus we have cleaned the data and removed and the outliers by detection using IQR and Z- score method
