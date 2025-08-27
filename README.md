@@ -1,4 +1,4 @@
-# Exno:1
+<img width="1731" height="639" alt="Screenshot 2025-08-27 192321" src="https://github.com/user-attachments/assets/bdecedba-2035-43a7-a650-9efa840da722" /># Exno:1
 Data Cleaning Process
 
 # AIM
@@ -27,7 +27,9 @@ df
 <img width="1557" height="605" alt="Screenshot 2025-08-26 221618" src="https://github.com/user-attachments/assets/9fa740a8-4772-460c-ad57-6c1c8374836e" />
 
 
-df.info()
+
+df.info() 
+
 <img width="845" height="417" alt="Screenshot 2025-08-26 222226" src="https://github.com/user-attachments/assets/5ddd6778-e0c9-453c-ac18-788da9c8655a" />
 
 
@@ -60,13 +62,87 @@ df.dropna(axis=0)
 <img width="1651" height="567" alt="image" src="https://github.com/user-attachments/assets/a69ad5b7-c3fd-4ed4-8937-814c5f28df5c" />
 
 df.dropna(axis=1)
+<img width="655" height="577" alt="Screenshot 2025-08-27 190800" src="https://github.com/user-attachments/assets/fd940582-9660-4000-ba30-31c824953444" />
 
+dfs=df[df['num_episodes']>20]
+dfs
+<img width="733" height="71" alt="Screenshot 2025-08-27 190940" src="https://github.com/user-attachments/assets/e05695dd-df10-4b47-990e-9b00340087f1" />
 
+<img width="1818" height="920" alt="Screenshot 2025-08-27 191037" src="https://github.com/user-attachments/assets/52e49ee4-e3d9-4d32-842f-2741a12a597c" />
 
+df.fillna(0)
+<img width="1564" height="579" alt="Screenshot 2025-08-27 191142" src="https://github.com/user-attachments/assets/065e8c28-2902-4521-a069-76bb9320b1f4" />
 
+dfs=df[df['show_name'].str.startswith(('A','F'))&(df['num_episodes']>25)]
+dfs
+<img width="1594" height="204" alt="Screenshot 2025-08-27 191703" src="https://github.com/user-attachments/assets/495066c6-1644-4df4-9eda-ad34840954ec" />
 
+df.iloc[:3]
+<img width="1551" height="240" alt="Screenshot 2025-08-27 191814" src="https://github.com/user-attachments/assets/79ae9d44-2fc9-4817-886c-83d1d395eac5" />
 
+df.iloc[:4]
+<img width="1536" height="274" alt="Screenshot 2025-08-27 191931" src="https://github.com/user-attachments/assets/0947dc9c-53f4-4fa3-972a-613650d9a4db" />
 
+df.iloc[[1,3,5],[1,3,5]]
+<img width="1288" height="248" alt="Screenshot 2025-08-27 192052" src="https://github.com/user-attachments/assets/f658db78-645b-4d70-a8d1-79ab7566ad6a" />
+
+df.fillna('sample value')
+<img width="1622" height="572" alt="Screenshot 2025-08-27 192217" src="https://github.com/user-attachments/assets/c68e85f8-c2b7-410a-906f-4d0548077e3b" />
+
+ffil=df.fillna(method='ffill')
+ffil
+<img width="1731" height="639" alt="Screenshot 2025-08-27 192321" src="https://github.com/user-attachments/assets/9c846a8f-a4a0-4c31-83f6-b04159e20368" />
+
+bfil=df.fillna(method='bfill')
+bfil
+<img width="1705" height="635" alt="Screenshot 2025-08-27 192450" src="https://github.com/user-attachments/assets/52871cae-a849-4f2a-8b31-858a27cb000c" />
+
+m=df.num_episodes.mean()
+m
+<img width="1168" height="120" alt="Screenshot 2025-08-27 192538" src="https://github.com/user-attachments/assets/f395a0e6-42a6-4257-af38-170b15704a7c" />
+
+m= df.fillna(df['num_episodes'].mean())
+m
+<img width="1583" height="592" alt="Screenshot 2025-08-27 192645" src="https://github.com/user-attachments/assets/920378da-a4bc-48ae-81cd-d601bbf48d7f" />
+
+fmean=df['lifetime_popularity_rank'].fillna(value=df['lifetime_popularity_rank'].mean())
+fmean
+<img width="1176" height="648" alt="Screenshot 2025-08-27 192741" src="https://github.com/user-attachments/assets/cca99f1f-e9ae-42ae-b81c-7421595637f0" />
+
+df=pd.read_csv('/content/SAMPLEIDS.csv')
+df
+<img width="1112" height="934" alt="Screenshot 2025-08-27 192825" src="https://github.com/user-attachments/assets/2bde1619-95c1-477b-90c1-b1fed03fcb7d" />
+
+df.shape
+<img width="1103" height="92" alt="Screenshot 2025-08-27 192908" src="https://github.com/user-attachments/assets/d2f2bfac-6f45-4c6b-954a-24da008b4bab" />
+
+df.describe()
+<img width="1020" height="431" alt="Screenshot 2025-08-27 192958" src="https://github.com/user-attachments/assets/0d372107-9b8d-486e-8697-dfa76f56d9de" />
+
+df.info()
+<img width="823" height="494" alt="Screenshot 2025-08-27 193043" src="https://github.com/user-attachments/assets/beb9974a-0fa1-4730-bc99-e14ddc893bbb" />
+
+df['GENDER'].value_counts()
+<img width="478" height="276" alt="Screenshot 2025-08-27 193138" src="https://github.com/user-attachments/assets/ee363604-6326-4028-8259-e234f656157d" />
+
+df.dropna(how='any').shape
+<img width="712" height="107" alt="Screenshot 2025-08-27 193229" src="https://github.com/user-attachments/assets/8d5882e9-f9ac-4d49-bf00-f0b27bdab627" />
+
+x1=df.dropna(how='any')
+x1
+<img width="1126" height="646" alt="image" src="https://github.com/user-attachments/assets/6c9fd0f7-0b03-4c19-9a1b-2f15879e290b" />
+
+res=df.dropna(subset=['M1','M2','M3','M4'],how='any')
+res
+<img width="1103" height="635" alt="Screenshot 2025-08-27 193419" src="https://github.com/user-attachments/assets/8726852f-25bc-45fe-8483-3b69398f34fe" />
+
+m2=df.TOTAL.mean()
+m2
+<img width="1069" height="119" alt="Screenshot 2025-08-27 193509" src="https://github.com/user-attachments/assets/8d35ce76-e384-4a29-9e64-5d4116cff2dc" />
+
+df.TOTAL.fillna(m2,inplace=False)
+
+<img width="921" height="925" alt="Screenshot 2025-08-27 193601" src="https://github.com/user-attachments/assets/802bc461-37b2-4d5d-932c-5f177b89c38e" />
 
 
 
